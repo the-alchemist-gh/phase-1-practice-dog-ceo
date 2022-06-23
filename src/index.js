@@ -28,9 +28,12 @@ function getBreed(){
       console.log(res.message)
       for (const data in res.message) {
         console.log(data)
-        breedList = document.createElement('li');
+        let breedList = document.createElement('li');
         breedList.textContent = data;
         dogBreeds.appendChild(breedList);
+        breedList.addEventListener('click',()=>{
+          breedList.style.color = 'red';
+        })
       }
   })
 }
